@@ -1,0 +1,32 @@
+\hh{Interactive Problems}
+
+Finish each output with a new line and flush the standard output stream. 
+
+The following code will auto-flush on the new line:
+``\texttt{cout <\relax< ... <\relax< endl}'' in \emph{C++},
+``\texttt{System.out.println}'' in \emph{Java}, 
+``\texttt{println}'' in \emph{Kotlin}, 
+``\texttt{print}'' in \emph{Python}.
+
+To explicit flush after the other output procedure, use
+``\texttt{fflush(stdout)}'' in \emph{C++}, 
+``\texttt{System.out.flush()}'' in \emph{Java} and \emph{Kotlin}, 
+``\texttt{sys.stdout.flush()}'' in \emph{Python}.
+
+Common issues for interactive problems:
+\begin{itemize}
+    \item \emph{Wrong Answer}~--- 
+        either an incorrect output or the interactive protocol violation.
+    \item \emph{Idleness Limit Exceeded}~---
+        the program waits for the input and there are no data in the standard input.
+        Possible causes:
+        \begin{itemize}
+            \item the program waits for the input instead of writing the output 
+                or finishing the execution;
+            \item the program has not output the new line or has not flushed 
+                the output stream, 
+                thus the Jury's program has not received its output.
+        \end{itemize}
+    \item \emph{Runtime Error}~--- rarely an interaction issue. 
+        Usually, it's a simple bug in the program.
+\end{itemize}

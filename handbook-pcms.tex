@@ -1,0 +1,60 @@
+\hh{PCMS Web Client User Guide}
+
+\ifdefined\online
+    \input{handbook-web-login.tex}
+\else
+    \input{handbook-spb-login.tex}
+\fi
+
+The \emph{Information} page contains contest information and messages
+sent by the Jury.
+During the Contest you will receive messages from the Jury with the results
+of your runs and clarifications.
+Incoming messages will be listed on this page.
+You can always read all your previous messages in this list.
+
+The \emph{Monitor} page contains the standings table.
+Teams are displayed as the rows of the table, ordered by team's rank.
+Problems correspond to the table columns.
+The intersection of team and problem contains information about team's
+result for that problem and the time of the first accepted run on this
+problem, measured in minutes.
+
+Possible results are:
+\nopagebreak
+{
+\makeatletter
+\@beginparpenalty=10000
+\makeatother
+\begin{shortitems}
+    \itemindent=1cm
+    \item[``\texttt{.}''] --- team has no runs for this problem;
+    \item[``\texttt{+}''] --- team has solved this problem, the first
+        run was successful;
+    \item[``\texttt{+k}''] --- team has solved this problem after
+        $k$ unsuccessful runs;
+    \item[``\texttt{-k}''] --- team has $k$ unsuccessful runs for this
+        problem.
+\end{shortitems}
+}
+
+To submit a program for evaluation, you should select the \emph{Submit} page.
+Choose the problem you have solved from the \emph{Problem} combo box and
+the language of your solution from the \emph{Language} combo box.
+Press the \emph{Choose File} button and choose the file that contains your solution,
+then press the \emph{Submit solution} button.
+You will see a page, confirming that your solution was successfully sent
+to the server for evaluation.
+Your solution will appear in the \emph{Runs} page.
+The evaluation result will appear on this page when solution is evaluated.
+You may solve other problems while waiting for the result.
+
+To submit a clarification request, you should select the \emph{Questions} page.
+Choose the problem you have the clarification request for from the \emph{Problem}
+combo box and type your clarification request in the \emph{Question} field,
+then press the \emph{Ask a question} button.
+The list of already asked questions and corresponding answers are displayed
+on the same page.
+
+To get the samples for all contest problems, select the \emph{Files} page. There
+you will find an archive for downloading.

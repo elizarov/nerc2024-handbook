@@ -1,0 +1,53 @@
+\hh{Programming languages}
+
+A solution to a problem is a program written in one of the following
+programming languages:
+
+\nopagebreak
+\tabcolsep=0.6mm%
+{\footnotesize{%
+\begin{tabular}{|l|l|l|}
+    \hline
+    \header{Compiler}
+    & \header{Compilation command}
+    & \header{Run command}
+    \\ \hline
+
+    GNU C++ 13.2
+    & \verb|g++ -O2 -std=c++20 -Wl,--stack=67108864 <source file>|
+    & \verb|<exec file>|
+    \\ \hline
+
+    Visual C++ 2019
+    & \verb|cl /O2 /EHs /TP <source file>|
+    & \verb|<exec file>|
+    \\ \hline
+
+    Java 21.0.5
+    & \verb|javac <source file>|
+    & \verb|java -Xmx1G -Xss64M <class file>|
+    \\ \hline
+
+    Kotlin 2.0.20
+    & \verb|kotlinc <source file>|
+    & \verb|java -Xmx1G -Xss64M <class file>|
+    \\ \hline
+
+    Python 3.11.6
+    & \emph{Not compiled}
+    & \verb|python <source file>|
+    \\ \hline
+
+    PyPy 7.3 (Py 3.10)
+    & \emph{Not compiled}
+    & \verb|pypy <source file>|
+    \\ \hline
+
+    \ifdefined\langCS
+        Visual C\# 7.3
+        & \verb|csc /r:System.Numerics.dll /optimize /unsafe <source file>|
+        & \verb|<exe file>|
+        \\ \hline
+    \fi
+\end{tabular}%
+}}

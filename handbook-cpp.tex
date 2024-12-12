@@ -1,0 +1,10 @@
+\hh{C++ Tips and Tricks}
+
+In case of large input data in MinGW we recommend to
+and disable synchronization with the standard C streams
+via ``\verb|ios_base::sync_with_stdio(false);|''
+and use \verb|std::cin|.
+Moreover, you may disable futher synchronization with
+\verb|scanf| and \verb|printf|, using ``\verb|cin.tie(0); cout.tie(0);|''.
+
+In Visual C++ the \verb|scanf| is the fastest option.

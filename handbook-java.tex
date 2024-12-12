@@ -1,0 +1,22 @@
+\hh{Java and Kotlin Tips and Tricks}
+\ifdefined\online
+\else
+    Before starting Eclipse copy workspace from \verb|c:\eclipse\workspace| to
+    your working directory.
+    Otherwise you will not be able to use external help files.
+\fi
+
+Your solutions will be executed by the command:
+``\verb|java -Xmx<memory limit> -Xss64m <class file>|''.
+The stack size of all threads created by your program is set to 64Mb.
+
+The first class defined in your solution must be declared \texttt{public}
+and must contain method \verb|main|. Otherwise you will receive
+\emph{Compilation Error} outcome.
+
+\verb|Scanner| class is slow. You can use \verb|BufferedReader| and
+\verb|StreamTokenizer| classes instead.
+
+Before using \verb|Scanner|, \verb|PrintWriter| and other classes that read
+or write floating-point numbers, include the following line in your code:
+``\verb|Locale.setDefault(Locale.US);|''.

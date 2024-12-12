@@ -1,0 +1,114 @@
+\hh{Run evaluation}
+
+\emph{Run} is a solution to a problem submitted for judging.
+The size of the source file with the run may not exceed 256KB.
+
+Immediately after submission of any run, the team may continue working on
+other problems.
+
+Contest software evaluates each run and marks it as \emph{accepted} or \emph{rejected}.
+
+The run is evaluated by executing it on a secret set of tests, common for
+all contestants.
+A run is accepted only if it gives correct answers to all tests.
+
+The \emph{memory limit} is the maximum amount of memory that a run may
+utilize on each test.
+The \emph{time limit} is the maximum execution time per test.
+The time and memory limits for each problem are specified in the problem statements.
+The run is not accepted if the program exceeds these limits.
+
+As soon as the run is evaluated, the contest software displays evaluation results.
+The team is informed whether the run is accepted or not.
+If the run is rejected, the error type and the test number (when applicable)
+are indicated.
+
+All tests cases are numbered from one. The first test cases in the test set
+are equal to the sample tests from the problem statement.
+The following tests are ordered with the idea to make easier test cases
+come before harder ones, although there are no guarantees.
+
+The possible outcomes are listed in the table at the next page in their order of priority.
+For example, if runtime error has occurred, then output is not checked.
+
+Evaluation process may be stopped several minutes before the end of the
+Contest.
+All runs submitted after this moment will be evaluated just after the end
+of the Contest.
+
+Runs are evaluated on \emph{Intel Core i3-8100, 3.6GHz} computers under
+\emph{Windows 10}.
+
+Runs are not allowed to:
+\begin{itemize}
+    \item access the network;
+    \item perform any file or network I/O;
+    \item execute other programs and create new processes;
+    \item work with subdirectories;
+    \item create or manipulate any GUI resources (windows, dialog boxes, etc.);
+    \item work with external devices (sound, printer, etc.);
+    \item attack system security;
+    \item do anything else that can stir the evaluation process and the Contest.
+\end{itemize}
+
+
+\begin{tabular}{|p{3.2cm}|p{1.45cm}|p{4.5cm}|p{6.5cm}|} \hline
+\raggedright \header{Outcome} & \raggedright \header{Test Number} & \raggedright \header{Comment} & {\raggedright \header{Possible Reasons}} \\ \hline\raggedright
+        Compilation error
+            & \raggedright No
+            & \raggedright Executable file was not created after compilation.
+            & {\raggedright
+                \qitem Syntax error in the program;
+                \qitem wrong file extension or language specified.
+            } \\ \hline\raggedright
+        Security violation
+            & \raggedright Yes
+            & \raggedright The program tried to violate the Contest Rules.
+            & {\raggedright
+                \qitem Error in the program;
+                \qitem purposeful rules violation (the violating team is disqualified in this case).
+            } \\ \hline\raggedright
+        Runtime error
+            & \raggedright Yes
+            & \raggedright The program terminates with non-zero exit code or throws an uncaught OS exception.
+            & {\raggedright
+                \qitem Runtime error;
+                \qitem uncaught exception;
+                \qitem missing '\verb|return 0|' statement in C++ main function;
+                \qitem '\verb|return (non-zero)|' statement in C++ main function;
+                \qitem '\verb|System.exit(non-zero)|' in Java.
+            } \\ \hline\raggedright
+        Time limit exceeded
+            & \raggedright Yes
+            & \raggedright The program exceeds the time limit.
+            & {\raggedright
+                \qitem Inefficient solution;
+                \qitem error in the program.
+            } \\ \hline\raggedright
+        Memory limit exceeded
+            & \raggedright Yes
+            & \raggedright The program exceeds the memory limit.
+            & {\raggedright
+                \qitem Inefficient solution;
+                \qitem error in the program.
+            } \\ \hline\raggedright
+        Idleness limit exceeded
+            & \raggedright Yes
+            & \raggedright The program does not consume processor time for a long period.
+            & {\raggedright
+                \qitem Input from console;
+                \qitem error in the program.
+            } \\ \hline\raggedright
+        Wrong answer
+            & \raggedright Yes
+            & \raggedright The answer is not correct or the checker cannot check output because it does not match the format specified in the problem statement.
+            & {\raggedright
+                \qitem{}The algorithm is not correct;
+                \qitem{}output format is not correct;
+                \qitem{}no output file.
+            } \\ \hline\raggedright
+        Accepted
+            & \raggedright No
+            & \raggedright Run is accepted.
+            & {\raggedright Program is correct.} \\ \hline
+\end{tabular}
